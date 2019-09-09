@@ -12,16 +12,18 @@
 >>> reimbursedOnDate
 >>> Expanse Category
 >>> isDeclined
+>>> isDeleted
 
 **Group /Department.**
 >>> Group Name.
 >>> Group Icon.
 
 **Employee.**
->>> Avatar
+>>> Avatar 
 >>> Employee Name
 >>> Amount Credit
 >>> Department
+>>> isDeleted
 
 **Category**
 
