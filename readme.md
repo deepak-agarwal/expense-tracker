@@ -1,32 +1,48 @@
+# Model
+
 **Expense Collection**
->>> Expense Name. [ Must be serachable. func serch()]
->>>  Amount.
->>>  [Array of Employees]  (connects to employee table)
->>>  Fraction/of/share.(Who paid who shared) {function  on the front end should be created}          
->>>  createdAt.
-<!-- >>> Group./Department(ALready present in employeeids array above) -->
->>> file. "url"
->>> Note
+1. Expense Name. [ Must be serachable. func serch()]
+1.  Amount.
+1.  [Array of Employees]  (connects to employee table)
+1.  Fraction/of/share.(Who paid who shared) {function  on the front end should be created}          
+1.  createdAt.
+1. file. "url"
+1. Note
+1. isReimbursed
+1. Expanse Category
+1. isDeclined
+1. isDeleted
+<!-- >>> Group./Department(ALready present in employeeidsarray above) -->
 <!-- >>> expense icon -->
->>> isReimbursed 
->>> reimbursedOnDate
->>> Expanse Category
->>> isDeclined
->>> isDeleted
+
+
+**Reimbursed**
+1. Expanseid
+1. createdAT
 
 **Group /Department.**
->>> Group Name.
->>> Group Icon.
+1. Group Name.
+1. Group Icon.
 
 **Employee.**
->>> Avatar 
->>> Employee Name
->>> Amount Credit
->>> Department
->>> isDeleted
+1. Avatar 
+1. Employee Name
+1. Amount Credit
+1. Department
+1. isDeleted
 
 **Category**
 
->>> CategoryName
->>> Icon
+1. CategoryName
+1. Icon
+
+
+# Controller func()
+
+**Expense Controller*
+
+1. list()
+2. create()
+3. update()
+
 
