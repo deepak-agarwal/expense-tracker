@@ -1,4 +1,5 @@
 const Expense = require('../model/expense')
+const Reimburshed = require('../model/reimburshed')
 
 module.exports.list = (req,res) =>{
     Expense.find({isDeleted : false})
@@ -21,6 +22,17 @@ module.exports.create = (req,res ) =>{
 module.exports.update = (req,res) => {
     const id = req.params.id
     const body = req.body
+    if(body.isReimburshed){
+        const reimburshed = new Reimburshed({expanseId:id})
+        reimburshed.save()
+        .then(reimburshed =>{
+            if(reimburshed)
+            res.json(reimburshed)
+            else
+            res.json({})
+        })
+        .catch(err=>console.log(err))
+    }
     Expense.findByIdAndUpdate(id,body,{new : true,useFindAndModify:false,runValidators:true})
     .then(expense => {
         if(expense)

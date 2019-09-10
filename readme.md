@@ -39,10 +39,17 @@
 
 # Controller func()
 
-**Expense Controller*
+**Expense Controller**
 
 1. list()
+
+      return the list of document with ```{isDeleted:false}``` 
 2. create()
+
+   return the response after creating a new document in the collection.
 3. update()
+
+   return the new record after updating the one in 'Expenses' collection  
+   when tht user updates ```{isRemiburshed:true}``` create a new record in Reimburshed model.
 
 
