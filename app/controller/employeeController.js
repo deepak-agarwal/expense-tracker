@@ -1,7 +1,7 @@
-const Employee = require('../model/employee')
+const Employee = require('../model/employee') 
 
 module.exports.list = (req,res) =>{
-    Employee.find({isDeleted : false}).populate('Department')
+    Employee.find().populate('departmentId')
     .then(employee => res.json(employee))
     .catch(err => console.log(err))
 }

@@ -7,10 +7,10 @@ const departmentSchema = new Schema ({
      type:String,
      required:true
  },
- icon :{
-     type:String,
-     data:Buffer
- }
+//  icon :{
+//      type:String,
+//      data:Buffer
+//  }
 })
 
 const Department = mongoose.model('Department',departmentSchema)

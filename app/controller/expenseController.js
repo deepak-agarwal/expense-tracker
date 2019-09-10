@@ -1,9 +1,11 @@
 const Expense = require('../model/expense')
 const Reimburshed = require('../model/reimburshed')
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
 
 module.exports.list = (req,res) =>{
-    Expense.find({isDeleted : false})
-    .then(expanse => res.json(expense))
+    Expense.find({isReimbursed : false}).populate('expanseCategory').populate({path: 'employeeIds',model: 'Employee',populate: {path: 'departmentId',model: 'Department'}})
+    .then(expense => res.json(expense))
     .catch(err => console.log(err))
 }
 

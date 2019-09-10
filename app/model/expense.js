@@ -20,10 +20,10 @@ const expenseSchema = new Schema({
         type:Date,
         default:Date.now
     },
-    file:{
-        type: String,
-         data: Buffer
-    },
+    // file:{
+    //     type: String,
+    //      data: Buffer
+    // },
     note:{
         type:String
     },
@@ -35,12 +35,11 @@ const expenseSchema = new Schema({
         type:Boolean,
         default:false
     },
-    isReimbursedOnDate:{
-        type:Date
-    },
+    
     expanseCategory:{
         type:Schema.Types.ObjectId,
-        required:true
+        required:true,
+        ref:'Category'
     },
     isDeclined :{
         type:Boolean,

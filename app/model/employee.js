@@ -4,17 +4,17 @@ const Schema = mongoose.Schema
 const employeeSchema = new Schema({
     name:{
         type:String,
-        required:type
+        required:true
     },
     credit:{
         type:Number,
         default: 0
     },
-    avatar:{
-        type:String,
-        data:Buffer
-    },
-    department:{
+    // avatar:{
+    //     type:String,
+    //     data:Buffer
+    // },
+    departmentId:{
         type:Schema.Types.ObjectId,
         ref:"Department"
     }

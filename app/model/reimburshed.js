@@ -15,4 +15,4 @@ const reimbushedSchema = new Schema({
 
 const Reimburshed = mongoose.model('Reimburshed',reimbushedSchema)
 
-modules.exports = Reimburshed
+module.exports = Reimburshed

@@ -2,7 +2,7 @@ const Category = require('../model/category')
 
 module.exports.list = (req,res)=>{
     Category.find()
-    .then(category => category)
+    .then(category => res.send(category))
     .catch(err=>{
         console.log(err)
     })

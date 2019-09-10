@@ -10,4 +10,14 @@ mongoose.connect('mongodb://localhost:27017/notes-app',{useNewUrlParser:true})
     console.log(err)
 })
 
+// const GridFsStorage = require('multer-gridfs-storage');
+
+// const storage = new GridFsStorage({
+//   url: "mongodb://localhost/My_DB",
+//   file: (req, file) => {
+//     return {
+//       filename: 'file_' + Date.now()
+//     };
+//   }
+// });
 module.exports = mongoose
