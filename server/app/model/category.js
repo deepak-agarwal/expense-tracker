@@ -7,10 +7,10 @@ const categorySchema = new Schema ({
      type:String,
      required:true
  },
-//  icon :{
-//      type:String,
-//      data:Buffer
-//  }
+createdAt:{
+    type:Date,
+    default:new Date()
+}
 })
 
 const Category = mongoose.model('Category',categorySchema)

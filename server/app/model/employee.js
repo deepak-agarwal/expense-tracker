@@ -30,7 +30,7 @@ const employeeSchema = new Schema({
     required: true,
     unique: true,
     minlength: 5,
-    maxlength: 10
+    maxlength: 16
   },
   password: {
     type: String,
@@ -59,8 +59,9 @@ const employeeSchema = new Schema({
   }
 });
 
-employeeSchema.pre("save", function(next) {
+employeeSchema.pre('save', function(next) {
   const employee = this;
+  console.log('x')
   if (employee.isNew) {
     bcrypt.genSalt(10).then(salt => {
       bcrypt.hash(employee.password, salt).then(encryptedPassword => {
@@ -109,7 +110,7 @@ employeeSchema.methods.generateToken = function() {
       });
   };
   
-  employeeSchema.statics.findByToken = function(token) {
+employeeSchema.statics.findByToken = function(token) {
     const Employee = this;
     let tokenData;
     try {

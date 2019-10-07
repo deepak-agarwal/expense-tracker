@@ -9,9 +9,11 @@ module.exports.list = (req,res) =>{
 module.exports.create = (req,res ) =>{
     const body = req.body
     const employee = new Employee(body)
+    console.log(employee)
     employee.save()
     .then((employee)=>{
         res.json(employee)
+        console.log(employee)
     })
     .catch(err=>{
         res.json(err)

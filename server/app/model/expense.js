@@ -11,6 +11,11 @@ const expenseSchema = new Schema({
     type: Number,
     required: true
   },
+  employeeId :{
+    type:Schema.Types.ObjectId,
+    required:true,
+    ref:'Employee'
+  },
   employeeIds: [
     {
       type: Schema.Types.ObjectId,
@@ -22,22 +27,13 @@ const expenseSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  // file:{
-  //     type: String,
-  //      data: Buffer
-  // },
   note: {
     type: String
   },
-  // expenseIcon:{
-  //     type: String,
-  //      data: Buffer
-  // },
   isReimbursed: {
     type: Boolean,
     default: false
   },
-
   expanseCategory: {
     type: Schema.Types.ObjectId,
     required: true,
@@ -47,11 +43,16 @@ const expenseSchema = new Schema({
     type: Boolean,
     default: false
   },
-  variableAmount : [
-    {
-      type: Number
+  variableAmount : [{
+    name:{
+      type:Schema.Types.ObjectId,
+      required:true
+    },
+    amount:{
+      type:Number,
+      required:true
     }
-  ]
+  }]
 });
 
 const Expense = mongoose.model("Expense", expenseSchema);

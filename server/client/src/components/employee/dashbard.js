@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ExpenseCreate from './expense-create';
-import EmployeeList from './expesnse-list';
+import ExpenseList from './expesnse-list';
 
 
 function EmployeeDashBoard() {
@@ -10,7 +10,7 @@ function EmployeeDashBoard() {
     <React.Fragment >
 {/* this both will be shown here along with charts */}
         <div><ExpenseCreate/></div>
-        <div><EmployeeList/></div>
+        <div><ExpenseList/></div>
 
     </React.Fragment>
   );
